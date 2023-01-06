@@ -89,6 +89,7 @@ const Section = styled.section`
   flex-direction: column;
 
   justify-content: space-between;
+  padding: 1rem 0rem;
   gap: 2rem;
 
   .links {
@@ -96,7 +97,7 @@ const Section = styled.section`
     width:100%;
 
     ul {
-      margin-top: 30px;
+      margin-top: 60px;
       list-style-type: none;
       display: flex;
       flex-direction: column;

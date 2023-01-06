@@ -3,7 +3,6 @@
     max-height: fit-content;
     min-width: 1500px;
     display: flex;
-    flex-direction: column;
     background-color: hsl(189, 86%, 16%);
 
 }

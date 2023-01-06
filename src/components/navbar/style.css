@@ -2,6 +2,8 @@
 @import "~@fontsource/lato";
 
 .navigation-container {
+    position: absolute;
+    top: 0;
     color: white;
     display: flex;
     justify-content: center;
