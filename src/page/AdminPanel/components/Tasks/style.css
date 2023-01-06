@@ -22,25 +22,77 @@
 .tasks {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
-    color: violet;
+    color: black;
     background-color:#FFFFFF;
     height: 100vh;
     width: 100%;
+    margin-left: 240px;
+    margin-top: 70px;
 }
 
 .getdata-div {
     width: 90%;
 }
 
-.add-btn {
-    position: absolute;
-    right: 0;
-    margin-right: 200px;
+.searchNewButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.headline{
+    padding-left: 60px;
+    padding-top: 30px
+}
+.searchInput{
+    width: 709px;
+    height: 40px;
+    margin-left: 408px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.newItemLink{
+    margin-right: 77px;
+    
 }
 
+.add-btn {
+    background: #0E262D;
+    box-shadow: 0px 2px 4px #858584;
+    border-radius: 32px;
+    margin-top: 5px;
+}
+.lupa{
+    height: 20px;
+    width: 22px;
+    display: flex;
+}
+.searchField{
+    width: 613px;
+    height: 24px;
+    
+}
+.filter{
+    height: 20px;
+    width: 22px;
+    display: flex
+}
+.searchFilter{
+    width: 613px;
+    height: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: none;
+}
+.magnifyIcon{
+
+}
 h2 {
-    padding-top: 100px;
-    padding-left: 10px;
+    
 }

@@ -213,11 +213,11 @@ function GetData() {
   });
   return (
     <div className="crud-box">
-      <div>
+      {/* <div>
         <Nav.Link href="add">
           <Button className="add-btn">New Item</Button>
         </Nav.Link>
-      </div>
+      </div> */}
       <div className="tabela">
         <BootstrapTable
           bootstrap4
