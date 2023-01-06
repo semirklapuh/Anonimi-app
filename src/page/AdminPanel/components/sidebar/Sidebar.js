@@ -87,7 +87,7 @@ const Section = styled.section`
   width: 240px;
   display: flex;
   flex-direction: column;
-
+  position: fixed;
   justify-content: space-between;
   padding: 1rem 0rem;
   gap: 2rem;

@@ -2,7 +2,7 @@
 @import "~@fontsource/lato";
 
 .navigation-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     color: white;
     display: flex;
