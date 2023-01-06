@@ -1,0 +1,16 @@
+.admin-panel {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(41, 50, 58);
+    font-family: "Lato";
+
+}
+
+.sidebar-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

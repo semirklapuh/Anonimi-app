@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/mdb-react-ui-kit/dist/css/mdb.min.css";
+
+// import "../node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.css";
+// import "../node_modules/react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
+import "./App.css";
+import NavigationBar from "./components/navbar/Navbar";
+import { Routes, Route } from "react-router-dom";
+import AdminPanel from "./page/AdminPanel/AdminPanel";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<AdminPanel />} />
+        <Route path="/home" element={<AdminPanel />} />
+      </Routes>
     </div>
   );
 }

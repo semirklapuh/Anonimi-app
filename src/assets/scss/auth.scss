@@ -1,0 +1,63 @@
+
+
+@import "./variables";
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+
+.btn {
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+a {
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.auth {
+  .auth-background-holder {
+    height: 100vh;
+    min-height: 100%;
+    
+  }
+}
+
+.auth-wrapper {
+  height: 100vh;
+
+  .auth-body {
+    width: 360px;
+  }
+
+  .auth-heading {
+    font-size: 1.5rem;
+  }
+
+  .auth-option {
+    font-size: 0.875rem;
+    > a {
+      color: $theme-text-color-secondary;
+    }
+  }
+
+  .forgot-password {
+    > a {
+      color: $theme-text-color-secondary;
+    }
+  }
+
+  input:focus {
+    box-shadow: none;
+  }
+}
+
+

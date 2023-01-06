@@ -1,0 +1,46 @@
+.tabela {
+    max-width: 100%;
+    min-width: fit-content;
+    padding: 140px 20px;
+    width: 100%;
+}
+
+.table-bordered,th, tr, td{
+    background: #FBFBFB;
+    border: none;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
+    
+}
+
+.crud-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: violet;
+    background-color:#FFFFFF;
+    height: 100vh;
+    width: 100%;
+}
+
+.getdata-div {
+    width: 90%;
+}
+
+.add-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 200px;
+}
+
+h2 {
+    padding-top: 100px;
+    padding-left: 10px;
+}

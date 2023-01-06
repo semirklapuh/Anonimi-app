@@ -1,0 +1,116 @@
+@import "~@fontsource/josefin-sans";
+@import "~@fontsource/lato";
+
+.navigation-container {
+    position: absolute;
+    top: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 0px 240px 0px 240px;
+    background-color: #000;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#basic-nav-dropdown {
+    padding: 0;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.navigation-brand {
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+.navigation-brand-txt {
+    font-family: "Josefin Sans";
+    font-size: 22px;
+    font-weight: 500;
+    padding: 24px 10px 0 10px;
+}
+
+.centered-nav {
+    padding-left: 200px;
+}
+
+.centered-nav-item {
+    margin: 0 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    margin-left: 100px;
+    box-shadow: none;
+}
+
+.btn-group:hover {
+    box-shadow: none;
+}
+
+.btn-login {
+    margin: 5px;
+    border-radius: 32px;
+    border: 1px solid #fbfbfb;
+    padding: 5px 20px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    background: none;
+    min-width: 100px;
+}
+
+.btn-login:hover {
+    transition: all 0.2s ease-in-out;
+    background: #c6f985;
+    color: #000;
+    box-shadow: none;
+}
+
+.btn-register {
+    min-width: 150px;
+    margin: 5px;
+    border-radius: 32px;
+    border: 1px solid #fbfbfb;
+    padding: 5px 20px;
+    background: #c6f985;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.btn-register:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #000;
+    box-shadow: none;
+}
+
+.navdropdown-item {
+    position: absolute;
+    margin-top: 0px;
+}
