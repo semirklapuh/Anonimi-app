@@ -1,116 +1,60 @@
 @import "~@fontsource/josefin-sans";
 @import "~@fontsource/lato";
 
+
 .navigation-container {
-    position: fixed;
-    top: 0;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    padding: 0px 240px 0px 240px;
-    background-color: #000;
-    left: 0;
-    width: 100%;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0px 240px 0px 240px;
+  background-color: #000;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-#basic-nav-dropdown {
-    padding: 0;
-}
-
-.dropdown-menu {
-    border-radius: 0;
-}
 
 .navigation-brand {
-    color: white;
-    display: flex;
-    padding-top: 18px;
-    padding-bottom: 20px;
+  color: white;
+  display: flex;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  margin-left: 3rem;
 }
 
 .navigation-brand-txt {
-    font-family: "Josefin Sans";
-    font-size: 22px;
-    font-weight: 500;
-    padding: 24px 10px 0 10px;
+  font-family: "Josefin Sans";
+  font-size: 22px;
+  font-weight: 500;
+  padding: 24px 10px 0 10px;
 }
 
-.centered-nav {
-    padding-left: 200px;
+
+.account-icon {
+  width: auto;
+  margin-right: 7rem;
+  margin-left: 1rem;
 }
 
-.centered-nav-item {
-    margin: 0 10px;
+.account-icon:hover{
+color: #c6f985;
 }
 
-.btn-group {
-    display: flex;
-    justify-content: space-evenly;
-    width: auto;
-    margin-left: 100px;
-    box-shadow: none;
+.account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
 }
 
-.btn-group:hover {
-    box-shadow: none;
-}
+.button {
+  background-color: #c6f985;
+  padding: 5px 20px;
 
-.btn-login {
-    margin: 5px;
-    border-radius: 32px;
-    border: 1px solid #fbfbfb;
-    padding: 5px 20px;
-    color: #fff;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    background: none;
-    min-width: 100px;
-}
-
-.btn-login:hover {
-    transition: all 0.2s ease-in-out;
-    background: #c6f985;
-    color: #000;
-    box-shadow: none;
-}
-
-.btn-register {
-    min-width: 150px;
-    margin: 5px;
-    border-radius: 32px;
-    border: 1px solid #fbfbfb;
-    padding: 5px 20px;
-    background: #c6f985;
-    color: black;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-}
-
-.btn-register:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #000;
-    box-shadow: none;
-}
-
-.navdropdown-item {
-    position: absolute;
-    margin-top: 0px;
+  box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
 }
