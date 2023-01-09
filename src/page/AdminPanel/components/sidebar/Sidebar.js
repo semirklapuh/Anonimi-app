@@ -9,6 +9,7 @@ import { MdOutlineBrandingWatermark } from "react-icons/md";
 import "./style.css";
 import showcasebg from "../../../../assets/ShowcaseBG.png";
 import "typeface-roboto"
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   const [currentLink, setCurrentLink] = useState(1);
   return (
@@ -20,19 +21,29 @@ const Sidebar = () => {
               onClick={() => setCurrentLink(1)}
               className={currentLink === 1 ? "active" : ""}
             >
-              <a href="#">
+              {/* <a href="#">
                 <SiSimpleanalytics />
                 <span>Dashboard</span>
-              </a>
+              </a> */}
+              <Link to="/home?key=1">
+                <SiSimpleanalytics />
+                <span>Dashboard</span>
+              </Link>
             </li>
             <li
-              onClick={() => setCurrentLink(2)}
+              onClick={() => 
+                setCurrentLink(2)
+              }
               className={currentLink === 2 ? "active" : ""}
             >
-              <a href="#">
+              {/* <a href="/home/2">
                 <FaTasks />
                 <span>Tasks</span>
-              </a>
+              </a> */}
+              <Link to="/home?key=2">
+                <FaTasks />
+                <span>Tasks</span>
+              </Link>
             </li>
             <li
               onClick={() => setCurrentLink(3)}
@@ -111,8 +122,8 @@ const Section = styled.section`
         border-radius: 8px 0px 0px 8px;
         font-size: 18px;
         width:100%;
-        display: flex;
-        justify-content: flex-start;
+        display: block;
+        
 
         &:hover {
           a {
@@ -124,9 +135,10 @@ const Section = styled.section`
         a {
           text-decoration: none;
           display: flex;
+          align-items: center;
           gap: 1rem;
           color: white;
-          padding: 10px;
+          padding: 15px;
           span{
             font-family: Roboto;
             font-weight: 400;
