@@ -30,6 +30,7 @@
     width: 100%;
     margin-left: 240px;
     margin-top: 70px;
+    align-items: center;
 }
 
 .getdata-div {
@@ -58,8 +59,9 @@
     align-content: center;
 }
 .newItemLink{
+    /* margin-right: 77px; */
+    /* width: 200px; */
     margin-right: 77px;
-    
 }
 
 .add-btn {
@@ -89,6 +91,15 @@
     margin-bottom: 5px;
     text-align: center;
     border: none;
+}
+.topPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.belowHeadline{
+    display: flex;
+    justify-content: space-between;
 }
 .magnifyIcon{
 

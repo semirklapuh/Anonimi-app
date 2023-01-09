@@ -10,17 +10,21 @@ import { color } from "@mui/system";
 const Tasks = () => {
   return (
     <div className="tasks">
+      <div className="topPage">
       <div className="headline"><h2>Tasks</h2></div>
+      <div className="belowHeadline">
       <div className="searchNewButton">
       <div className="searchInput">
         <div className="lupa"><RxMagnifyingGlass style={{width: "20px", height: "20px"}}/></div>
         <div className="searchField"><input className="searchFilter" placeholder="Search"/></div>
         <div className="filter"><TbAdjustmentsHorizontal style={{width: "20px", height: "20px"}}/></div>
       </div>
+      </div>
       <div className="newItemLink">
         <Nav.Link href="#">
           <Button className="add-btn"> <HiOutlinePlus /> New Task</Button>
         </Nav.Link>
+      </div>
       </div>
       </div>
 
