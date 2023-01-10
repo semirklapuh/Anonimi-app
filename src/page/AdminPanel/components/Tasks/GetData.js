@@ -10,17 +10,57 @@ import axios from "axios";
 
 function GetData() {
 
-  let produkti = []
+  const [onLoad, setOnLoad] = useState(true);
+  const [produkti, setProdukti] = useState([]);
   const [userData, setUserData] = useState([]);
   useEffect(() => {
     // GET request using axios inside useEffect React hook
-    axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semirklapuh@meshmind.io')
-         .then(response => {setUserData(response.data)});
-          
+    axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semir.klapuh@meshmind.io')
+         .then(response => {setUserData(response.data)
+        });
+        
 // empty dependency array means this effect will only run once (like componentDidMount in classes)
 }, []);
+
+useEffect(() => {
+        
+  onLoad ?
+   getProdukti() 
+   : console.log("radi ponovoo");
+
+}, [userData]);
  
 
+  function getProdukti()
+  {
+    userData !== null ?
+        userData.map(element => {
+          console.log("Semir dohvaceni podaci: " + element.size)
+          setProdukti((preData)=>
+            [...preData,{
+                 preview: <div> <img
+            alt=""
+            src={LogoImage}
+            width="40"
+            height="25"
+          /></div>,
+            project: "Project1",
+            date: "12.02.2022.",
+            taskName: element.filename,
+            service: "faces, plates",
+            size: element.size,
+            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
+            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
+            imageCount: "1"
+            }] 
+          )
+          setOnLoad(false) 
+        })
+        
+       
+        :console.log("nije uradjen update userData")     
+
+  }
 
 
 //   const submitAnonymize = async () => {
@@ -223,7 +263,9 @@ function GetData() {
     },
   ];
 
-  const pagination = paginationFactory({
+  const pagination = 
+  produkti.length >= 5 ?
+ ( paginationFactory({
     page: 2,
     sizePerPage: 5,
     lastPageText: ">>",
@@ -240,69 +282,22 @@ function GetData() {
       console.log("page", page);
       console.log("sizePerPage", sizePerPage);
     },
-  });
+  })) : null;
 
 
 
   return (
     <div className="crud-box">
-      {/* <div>
-        <Nav.Link href="add">
-          <Button className="add-btn">New Item</Button>
-        </Nav.Link>
-      </div> */}
-      {/* {
-        userData.forEach(element => {
-          console.log("Semir dohvaceni podaci: " + element.size)
-          produkti.push({
-            preview: <div> <img
-            alt=""
-            src={LogoImage}
-            width="40"
-            height="25"
-          /></div>,
-            project: "Project1",
-            date: "12.02.2022.",
-            taskName: element.filename,
-            service: "faces, plates",
-            size: element.size,
-            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
-            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
-            imageCount: "1",
-          })
-        })      
-      } */}
-      {console.log("Semir dohvaceni podaci: "+ userData)} 
-      {
-        userData !== null ?
-        userData.forEach(element => {
-          console.log("Semir dohvaceni podaci: " + element.size)
-          produkti.push({
-            preview: <div> <img
-            alt=""
-            src={LogoImage}
-            width="40"
-            height="25"
-          /></div>,
-            project: "Project1",
-            date: "12.02.2022.",
-            taskName: element.filename,
-            service: "faces, plates",
-            size: element.size,
-            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
-            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
-            imageCount: "1",
-          })
-        })
-        
-        :console.log("nije uradjen update userData")     
-      } 
-
       
+      {
+        console.log("produkti: " + produkti)
+      }
+      {
+        console.log("products: " + products)
+      }
 
-
-      {/* { 
-      produkti[0].taskName !== undefined ?
+        { 
+      produkti.length > 0 ?
       <div className="tabela">
         <BootstrapTable
           bootstrap4
@@ -311,8 +306,9 @@ function GetData() {
           columns={columns}
           defaultSorted={defaultSorted}
           pagination={pagination}
+          
         />
-      </div>   :console.log("nije uradjen update userData")   }  */}
+      </div>   :console.log("nije uradjen update userData")   }   
     </div>
   );
 }
