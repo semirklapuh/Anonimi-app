@@ -9,7 +9,13 @@
     background: #FBFBFB;
     border: none;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
-    
+}
+
+.react-bootstrap-table{
+    text-align: center;
+}
+th{
+   
 }
 
 .crud-box {
@@ -106,4 +112,16 @@
 }
 h2 {
     
+}
+
+.tabelDownloadIcon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.tabelCompletedIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

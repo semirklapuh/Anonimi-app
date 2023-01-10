@@ -1,11 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { Button, Nav } from "react-bootstrap";
-
+import { RiDownloadLine } from "react-icons/ri";
+import { GoPrimitiveDot } from "react-icons/go";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
+import LogoImage from "../../../../assets/logo.png";
 import "./style.css";
+import axios from "axios";
 
 function GetData() {
+
+  let produkti = []
+  const [userData, setUserData] = useState([]);
+  useEffect(() => {
+    // GET request using axios inside useEffect React hook
+    axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semirklapuh@meshmind.io')
+         .then(response => {setUserData(response.data)});
+          
+// empty dependency array means this effect will only run once (like componentDidMount in classes)
+}, []);
+ 
+
+
+
+//   const submitAnonymize = async () => {
+//     await axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semirklapuh@meshmind.io')
+//     .then(response => {setUserData(response.data)});
+// };
+
+
+  
+
   const products = [
     {
       preview: 1,
@@ -162,14 +187,19 @@ function GetData() {
       imageCount: "1",
     },
     {
-      preview: 15,
+      preview: <div> <img
+      alt=""
+      src={LogoImage}
+      width="40"
+      height="25"
+    /></div>,
       project: "Project1",
       date: "12.02.2022.",
-      taskName: "Zackery",
-      service: "Bear",
-      size: "120MB",
-      status: "completed",
-      download: "download",
+      taskName: "ImageTest123",
+      service: "faces, plates",
+      size: "12 MB",
+      status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
+      download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
       imageCount: "1",
     },
   ];
@@ -211,6 +241,9 @@ function GetData() {
       console.log("sizePerPage", sizePerPage);
     },
   });
+
+
+
   return (
     <div className="crud-box">
       {/* <div>
@@ -218,16 +251,68 @@ function GetData() {
           <Button className="add-btn">New Item</Button>
         </Nav.Link>
       </div> */}
+      {/* {
+        userData.forEach(element => {
+          console.log("Semir dohvaceni podaci: " + element.size)
+          produkti.push({
+            preview: <div> <img
+            alt=""
+            src={LogoImage}
+            width="40"
+            height="25"
+          /></div>,
+            project: "Project1",
+            date: "12.02.2022.",
+            taskName: element.filename,
+            service: "faces, plates",
+            size: element.size,
+            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
+            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
+            imageCount: "1",
+          })
+        })      
+      } */}
+      {console.log("Semir dohvaceni podaci: "+ userData)} 
+      {
+        userData !== null ?
+        userData.forEach(element => {
+          console.log("Semir dohvaceni podaci: " + element.size)
+          produkti.push({
+            preview: <div> <img
+            alt=""
+            src={LogoImage}
+            width="40"
+            height="25"
+          /></div>,
+            project: "Project1",
+            date: "12.02.2022.",
+            taskName: element.filename,
+            service: "faces, plates",
+            size: element.size,
+            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
+            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
+            imageCount: "1",
+          })
+        })
+        
+        :console.log("nije uradjen update userData")     
+      } 
+
+      
+
+
+      {/* { 
+      produkti[0].taskName !== undefined ?
       <div className="tabela">
         <BootstrapTable
           bootstrap4
-          keyField="preview"
-          data={products}
+          keyField="taskName"
+          data={produkti}
           columns={columns}
           defaultSorted={defaultSorted}
           pagination={pagination}
         />
-      </div>
+      </div>   :console.log("nije uradjen update userData")   }  */}
     </div>
   );
 }
