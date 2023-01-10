@@ -1,0 +1,104 @@
+.card {
+    border: 1px solid red;
+    display: flex;
+    padding: 24px 32px 32px;
+    margin-right: 1rem;
+  
+    gap: 32px;
+  
+    width: 490px;
+    height: 300px;
+  
+    background: #fbfbfb;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+  }
+  
+  .card__title {
+    width: 304px;
+    height: 54px;
+  
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 82.03%;
+    /* or 20px */
+  
+    display: flex;
+    align-items: center;
+  
+    /* Primary Dark */
+  
+    color: #0e262d;
+    padding-bottom: 2rem;
+  }
+  
+  .card__consumption {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    /* identical to box height, or 64px */
+  
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+  
+    /* Primary Dark */
+  
+    color: #0e262d;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  
+    padding-top: 1rem;
+  }
+  
+  .card__MB_left {
+    left: calc(50% - 434px / 2);
+    bottom: 0px;
+  
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 82.03%;
+    /* or 20px */
+  
+    display: flex;
+    align-items: center;
+  
+    /* Red */
+  
+    color: #eb5757;
+  
+    padding: 3rem 0;
+  }
+  
+  .card__progressBar {
+    padding-top: 1rem;
+    height: 1rem;
+  }
+  
+  .wrapper {
+    height: 12px;
+    border-radius: 24px;
+    background-color: lightgrey;
+  }
+  
+  .progress-bar {
+    background: #184952;
+  }
+  
+  .card__currentData {
+  }
+  
+  .card__maxData {
+    font-size: 30px;
+  }
+  
