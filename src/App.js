@@ -7,7 +7,9 @@ import "./App.css";
 import NavigationBar from "./components/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import AdminPanel from "./page/AdminPanel/AdminPanel";
-import { Dashboard, Task } from "@mui/icons-material";
+import {Task } from "@mui/icons-material";
+import Dashboard from "./page/AdminPanel/components/Dashboard/Dashboard";
+import NewTask from "./page/AdminPanel/components/Tasks/NewTask/NewTask";
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
         <Route path="/" element={<AdminPanel />} />
         <Route path="/home" element={<AdminPanel />} />
         <Route path="/home/1" element={<AdminPanel />} />
-        <Route path="/home?value=2" element={<AdminPanel />} />
+        <Route path="/home?key=2" element={<AdminPanel />} />
+        <Route path="/home?key=1" element={<AdminPanel />} />
+        <Route path="/home?key=9" element={<NewTask />} />
       </Routes>
     </div>
   );

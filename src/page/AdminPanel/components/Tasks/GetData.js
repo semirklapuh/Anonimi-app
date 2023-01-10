@@ -40,7 +40,7 @@ useEffect(() => {
             [...preData,{
                  preview: <div> <img
             alt=""
-            src={LogoImage}
+            src={`data:image/jpeg;base64,${element.image}`}
             width="40"
             height="25"
           /></div>,

@@ -1,0 +1,268 @@
+.newTask{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    color: black;
+    background-color:#FFFFFF;
+    height: 100vh;
+    width: 100%;
+    margin-left: 240px;
+    margin-top: 64px;
+    align-items: center;
+
+}
+.newTaskBackButton{
+height: 40px;
+width: 100%;
+margin-top: 36px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.backNavigation{
+width: 200px;
+margin-left: 64px;
+display: flex;
+align-items: center;
+}
+.backArrow{
+height: 26px;
+width: 26px;
+}
+.headlineNewTask{
+width: 160px;
+height: 40px;
+margin-left: 18px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.headlineText{
+height: 40px;
+display: flex;
+width: 160px;
+align-items: center;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 122.03%;
+}
+
+.backArrow:hover{
+cursor: pointer;
+}
+
+.headlineText{
+cursor: default;
+}
+
+.uploadFiles{ 
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 32px;
+gap: 20px;
+
+width: 1059px;
+height: 100vh;
+
+background: #FBFBFB;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+border-radius: 32px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.taskConfiguration{
+/* Auto layout */
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 32px;
+gap: 20px;
+
+width: 474px;
+height: 100vh;;
+
+background: #FBFBFB;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+border-radius: 32px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin-left: 32px;
+}
+
+.uploadTaskConfiguration{
+display: flex;
+flex-direction: row;
+margin-top: 32px;
+}
+
+.uploadText{
+    width: 100%;
+    height: 30px;
+
+}
+.uploadText:hover{
+    cursor: default;
+}
+.uploadSpan{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 82.03%;
+padding-left: 82px;
+}
+.dragAndDropFeature{
+    border: 1px solid black;
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 248px 8px;
+gap: 46px;
+margin-top: 46px;
+width: 911px;
+height: 253px;
+
+background: #FFFFFF;
+/* Primary Dark */
+
+border: 2.38756px dashed #0E262D;
+border-radius: 32px;
+}
+
+.dragAndDropFeature:hover{
+    background-color: #E6F8CD;
+    cursor: pointer; 
+}
+
+.horizontalLine{
+    width: 947px;
+height: 0px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+transform: rotate(-0.06deg);
+margin-top: 46px;
+}
+.filesList{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+.filesText{
+    width: 100%;
+    height: 30px;
+}
+.filesSpan{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 82.03%;
+padding-left: 50px;
+}
+
+.filesText:hover{
+    cursor: default;
+}
+
+.uploadIcon{
+    
+    height: 50px;
+    width: 50px;
+}
+.browse{
+  
+    width: 195px;
+    height: 19px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 140.62%;
+
+    color: #0E262D;
+}
+.supportedFormat{
+    width: 415px;
+height: 20px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140.62%;
+
+color: #0E262D;
+
+margin-bottom: 10px;
+}
+
+.taskConfigurationTitle{
+    width: 200px;
+height: 20px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 82.03%;
+/* identical to box height, or 20px */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Primary Dark */
+
+color: #0E262D;
+
+opacity: 0.2;
+}
+
+.taskName{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.taskNameInput{
+    background: #FBFBFB;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+border-radius: 32px;
+border: none;
+    margin-left: 33px;
+    width: 70%;
+    padding-left: 15.93px;
+}
+
+.horizontalLineConfig{
+    width: 100%;
+height: 0px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+transform: rotate(-0.06deg);
+margin-top: 15px;
+}

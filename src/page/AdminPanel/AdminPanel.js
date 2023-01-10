@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import Tasks from "./components/Tasks/Tasks";
-import { Dashboard } from "@mui/icons-material";
+import Dashboard from "./components/Dashboard/Dashboard";
+import NewTask from "./components/Tasks/NewTask/NewTask";
 import {
   useLocation,
   useSearchParams
@@ -41,6 +42,9 @@ const AdminPanel = () => {
                   case "2": 
                   console.log("case 2 task")
                   return <Tasks/>;
+                  case "9": 
+                  console.log("case 9 newtask")
+                  return <NewTask/>;
                   default: 
                   console.log("default case")
                   return <Dashboard/>;
