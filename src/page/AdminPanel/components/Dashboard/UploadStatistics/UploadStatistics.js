@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./UploadStatistics.css";
 
 // import { Chart } from "react-google-charts";
@@ -6,11 +6,21 @@ import { PieChart } from "react-minimal-pie-chart";
 
 const UploadStatistics = ({ data }) => {
   const testData = [
-    { title: "Single Image", value: 268, color: "#C6F985" },
-    { title: "Single Video", value: 56, color: "#4EC8C0" },
-    { title: "Archive", value: 17, color: "#184952" },
-    { title: "Bulk upload", value: 36, color: "#0E262D" },
+    { title: "Single Image", value: data.singleImage, color: "#C6F985" },
+    { title: "Single Video", value: data.singleVideo, color: "#4EC8C0" },
+    { title: "Archive", value: data.archive, color: "#184952" },
+    { title: "Bulk upload", value: data.bulkUpload, color: "#0E262D" },
   ];
+
+  const [totalTasks, setTotalTasks] = useState(0);
+
+  useEffect(() => {
+    setTotalTasks(() => {
+      return (
+        data.singleImage + data.singleVideo + data.archive + data.bulkUpload
+      );
+    });
+  }, []);
 
   return (
     <div className="uploadStatistics">
@@ -19,7 +29,7 @@ const UploadStatistics = ({ data }) => {
         <div className="uploadStatistics__chart">
           <PieChart
             data={testData}
-            labelPosition={70}
+            labelPosition={75}
             lengthAngle={360}
             lineWidth={15}
             label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
@@ -29,21 +39,21 @@ const UploadStatistics = ({ data }) => {
         <div className="uploadStatistics__data2">
           <div className="uploadStatistics__data3">
             <div className="uploadStatistics__name">
-              <span class="dot1"></span>
+              <span className="dot1"></span>
               <p>Single image</p>
             </div>
             <p>{data.singleImage}</p>
           </div>
           <div className="uploadStatistics__data3">
             <div className="uploadStatistics__name">
-              <span class="dot2"></span>
+              <span className="dot2"></span>
               <p>Single video</p>
             </div>
             <p>{data.singleVideo}</p>
           </div>
           <div className="uploadStatistics__data3">
             <div className="uploadStatistics__name">
-              <span class="dot3"></span>
+              <span className="dot3"></span>
               <p>Archive</p>
             </div>
 
@@ -51,7 +61,7 @@ const UploadStatistics = ({ data }) => {
           </div>
           <div className="uploadStatistics__data3">
             <div className="uploadStatistics__name">
-              <span class="dot4"></span>
+              <span className="dot4"></span>
               <p>Bulk upload</p>
             </div>
 
@@ -59,7 +69,7 @@ const UploadStatistics = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="uploadStatistics__total">Total Tasks: 377</div>
+      <div className="uploadStatistics__total">Total Tasks: {totalTasks}</div>
     </div>
   );
 };

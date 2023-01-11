@@ -15,9 +15,9 @@ const Progress = ({ data }) => {
       <ProgressBar
         now={consumption}
         className="wrapper"
-        barContainerClassName="container"
-        completedClassName="barCompleted"
-        labelClassName="label"
+        // barContainerClassName="container"
+        // completedClassName="barCompleted"
+        // labelClassName="label"
       />
     </div>
   );

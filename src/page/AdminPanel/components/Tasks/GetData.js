@@ -8,68 +8,68 @@ import LogoImage from "../../../../assets/logo.png";
 import "./style.css";
 import axios from "axios";
 
-function GetData() {
-
+function GetData({ dashboard }) {
   const [onLoad, setOnLoad] = useState(true);
   const [produkti, setProdukti] = useState([]);
   const [userData, setUserData] = useState([]);
   useEffect(() => {
     // GET request using axios inside useEffect React hook
-    axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semir.klapuh@meshmind.io')
-         .then(response => {setUserData(response.data)
-        });
-        
-// empty dependency array means this effect will only run once (like componentDidMount in classes)
-}, []);
+    axios
+      .get(
+        "https://localhost:8001/api/v1/image/get-all-user-images?username=semir.klapuh@meshmind.io"
+      )
+      .then((response) => {
+        setUserData(response.data);
+      });
 
-useEffect(() => {
-        
-  onLoad ?
-   getProdukti() 
-   : console.log("radi ponovoo");
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+  }, []);
 
-}, [userData]);
- 
+  useEffect(() => {
+    onLoad ? getProdukti() : console.log("radi ponovoo");
+  }, [userData]);
 
-  function getProdukti()
-  {
-    userData !== null ?
-        userData.map(element => {
-          console.log("Semir dohvaceni podaci: " + element.size)
-          setProdukti((preData)=>
-            [...preData,{
-                 preview: <div> <img
-            alt=""
-            src={LogoImage}
-            width="40"
-            height="25"
-          /></div>,
-            project: "Project1",
-            date: "12.02.2022.",
-            taskName: element.filename,
-            service: "faces, plates",
-            size: element.size,
-            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
-            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
-            imageCount: "1"
-            }] 
-          )
-          setOnLoad(false) 
+  function getProdukti() {
+    userData !== null
+      ? userData.map((element) => {
+          console.log("Semir dohvaceni podaci: " + element.size);
+          setProdukti((preData) => [
+            ...preData,
+            {
+              preview: (
+                <div>
+                  {" "}
+                  <img alt="" src={LogoImage} width="40" height="25" />
+                </div>
+              ),
+              project: "Project1",
+              date: "12.02.2022.",
+              taskName: element.filename,
+              service: "faces, plates",
+              size: element.size,
+              status: (
+                <div className="tabelCompletedIcon">
+                  <GoPrimitiveDot style={{ fill: "#85D952" }} />
+                  <span style={{ paddingLeft: "5px" }}>Completed</span>
+                </div>
+              ),
+              download: (
+                <div className="tabelDownloadIcon">
+                  <RiDownloadLine />
+                </div>
+              ),
+              imageCount: "1",
+            },
+          ]);
+          setOnLoad(false);
         })
-        
-       
-        :console.log("nije uradjen update userData")     
-
+      : console.log("nije uradjen update userData");
   }
 
-
-//   const submitAnonymize = async () => {
-//     await axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semirklapuh@meshmind.io')
-//     .then(response => {setUserData(response.data)});
-// };
-
-
-  
+  //   const submitAnonymize = async () => {
+  //     await axios.get('https://localhost:8001/api/v1/image/get-all-user-images?username=semirklapuh@meshmind.io')
+  //     .then(response => {setUserData(response.data)});
+  // };
 
   const products = [
     {
@@ -182,66 +182,75 @@ useEffect(() => {
       download: "download",
       imageCount: "1",
     },
-    {
-      preview: 11,
-      project: "Project1",
-      date: "12.02.2022.",
-      taskName: "Delphine",
-      service: "Deer",
-      size: "120MB",
-      status: "completed",
-      download: "download",
-      imageCount: "1",
-    },
-    {
-      preview: 12,
-      project: "Project1",
-      date: "12.02.2022.",
-      taskName: "Elinore",
-      service: "Bear",
-      size: "120MB",
-      status: "completed",
-      download: "download",
-      imageCount: "1",
-    },
-    {
-      preview: 13,
-      project: "Project1",
-      date: "12.02.2022.",
-      taskName: "Stokes",
-      service: "Tiger",
-      size: "120MB",
-      status: "completed",
-      download: "download",
-      imageCount: "1",
-    },
-    {
-      preview: 14,
-      project: "Project1",
-      date: "12.02.2022.",
-      taskName: "Tamara",
-      service: "Lion",
-      size: "120MB",
-      status: "completed",
-      download: "download",
-      imageCount: "1",
-    },
-    {
-      preview: <div> <img
-      alt=""
-      src={LogoImage}
-      width="40"
-      height="25"
-    /></div>,
-      project: "Project1",
-      date: "12.02.2022.",
-      taskName: "ImageTest123",
-      service: "faces, plates",
-      size: "12 MB",
-      status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
-      download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
-      imageCount: "1",
-    },
+    // {
+    //   preview: 11,
+    //   project: "Project1",
+    //   date: "12.02.2022.",
+    //   taskName: "Delphine",
+    //   service: "Deer",
+    //   size: "120MB",
+    //   status: "completed",
+    //   download: "download",
+    //   imageCount: "1",
+    // },
+    // {
+    //   preview: 12,
+    //   project: "Project1",
+    //   date: "12.02.2022.",
+    //   taskName: "Elinore",
+    //   service: "Bear",
+    //   size: "120MB",
+    //   status: "completed",
+    //   download: "download",
+    //   imageCount: "1",
+    // },
+    // {
+    //   preview: 13,
+    //   project: "Project1",
+    //   date: "12.02.2022.",
+    //   taskName: "Stokes",
+    //   service: "Tiger",
+    //   size: "120MB",
+    //   status: "completed",
+    //   download: "download",
+    //   imageCount: "1",
+    // },
+    // {
+    //   preview: 14,
+    //   project: "Project1",
+    //   date: "12.02.2022.",
+    //   taskName: "Tamara",
+    //   service: "Lion",
+    //   size: "120MB",
+    //   status: "completed",
+    //   download: "download",
+    //   imageCount: "1",
+    // },
+    // {
+    //   preview: (
+    //     <div>
+    //       {" "}
+    //       <img alt="" src={LogoImage} width="40" height="25" />
+    //     </div>
+    //   ),
+    //   project: "Project1",
+    //   date: "12.02.2022.",
+    //   taskName: "ImageTest123",
+    //   service: "faces, plates",
+    //   size: "12 MB",
+    //   status: (
+    //     <div className="tabelCompletedIcon">
+    //       <GoPrimitiveDot style={{ fill: "#85D952" }} />
+    //       <span style={{ paddingLeft: "5px" }}>Completed</span>
+    //     </div>
+    //   ),
+    //   download: (
+    //     <div className="tabelDownloadIcon">
+    //       <RiDownloadLine />
+    //     </div>
+    //   ),
+    //   imageCount: "1",
+    // },
   ];
 
   const columns = [
@@ -256,6 +265,13 @@ useEffect(() => {
     { dataField: "imageCount", text: "Image count", sort: true },
   ];
 
+  const dashboardColumns = [
+    { dataField: "preview", text: "Preview", sort: true },
+    { dataField: "taskName", text: "Task name", sort: true },
+    { dataField: "project", text: "Project", sort: true },
+    { dataField: "status", text: "Status", sort: true },
+  ];
+
   const defaultSorted = [
     {
       dataField: "taskName",
@@ -263,52 +279,47 @@ useEffect(() => {
     },
   ];
 
-  const pagination = 
-  produkti.length >= 5 ?
- ( paginationFactory({
-    page: 2,
-    sizePerPage: 5,
-    lastPageText: ">>",
-    firstPageText: "<<",
-    nextPageText: ">",
-    prePageText: "<",
-    showTotal: true,
-    alwaysShowAllBtns: true,
-    onPageChange: function (page, sizePerPage) {
-      console.log("page", page);
-      console.log("sizePerPage", sizePerPage);
-    },
-    onSizePerPageChange: function (page, sizePerPage) {
-      console.log("page", page);
-      console.log("sizePerPage", sizePerPage);
-    },
-  })) : null;
-
-
+  const pagination =
+    products.length >= 5 
+      ? paginationFactory({
+          page: 2,
+          sizePerPage: 5,
+          lastPageText: ">>",
+          firstPageText: "<<",
+          nextPageText: ">",
+          prePageText: "<",
+          showTotal: true,
+          alwaysShowAllBtns: true,
+          onPageChange: function (page, sizePerPage) {
+            console.log("page", page);
+            console.log("sizePerPage", sizePerPage);
+          },
+          onSizePerPageChange: function (page, sizePerPage) {
+            console.log("page", page);
+            console.log("sizePerPage", sizePerPage);
+          },
+        })
+      : null;
 
   return (
     <div className="crud-box">
-      
-      {
-        console.log("produkti: " + produkti)
-      }
-      {
-        console.log("products: " + products)
-      }
+      {console.log("produkti: " + produkti)}
+      {console.log("products: " + products)}
 
-        { 
-      produkti.length > 0 ?
-      <div className="tabela">
-        <BootstrapTable
-          bootstrap4
-          keyField="taskName"
-          data={produkti}
-          columns={columns}
-          defaultSorted={defaultSorted}
-          pagination={pagination}
-          
-        />
-      </div>   :console.log("nije uradjen update userData")   }   
+      {products.length > 0 ? (
+        <div className="tabela">
+          <BootstrapTable
+            bootstrap4
+            keyField="taskName"
+            data={products}
+            columns={dashboard ? dashboardColumns : columns}
+            defaultSorted={defaultSorted}
+            pagination={pagination}
+          />
+        </div>
+      ) : (
+        console.log("nije uradjen update userData")
+      )}
     </div>
   );
 }

@@ -8,17 +8,66 @@
   height: 100vh;
   width: 100%;
   margin-left: 240px;
-  margin-top: 64px;
+  padding-top: 64px;
 }
 
-.title {
-  margin: 2rem 3rem;
+.dashboard__title {
+  margin: 1rem 2rem;
   display: flex;
+
+  width: 175px;
+  height: 44px;
+  left: calc(50% - 175px / 2 - 692.5px);
+  top: 36px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 122.03%;
+  /* identical to box height, or 44px */
+
+  display: flex;
+  align-items: center;
+
+  /* Primary Dark */
+
+  color: #0e262d;
 }
 
-.cards {
+.dashboard__cards {
   display: flex;
   justify-content: space-between;
-  margin: 0 3rem;
+  margin: 0 2rem;
 }
 
+.dashboard__card {
+  display: flex;
+  padding: 24px 32px 32px;
+  margin-right: 1rem;
+
+  gap: 32px;
+
+  width: 490px;
+  height: 300px;
+}
+
+.dashboard__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.card {
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 32px;
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.crud-box {
+  width: 100%;
+}
