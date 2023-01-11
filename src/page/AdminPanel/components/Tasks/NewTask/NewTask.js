@@ -1,14 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import {IoMdArrowBack} from "react-icons/io";
 import {AiOutlineUpload} from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { Opacity, RadioButtonUnchecked } from "@mui/icons-material";
+import Switch from "react-switch";
+import {alpha, styled } from '@mui/material/styles';
+import { pink } from "@mui/material/colors";
+import {RxMagnifyingGlass} from "react-icons/rx";
 
 let navigate = useNavigate;
 
 const NewTask = () => {
+
+    const [addProjectSwitch, setAddProjectSwitch]= useState(false);
+    const [facesAnonimization, setFacesAnonimization]= useState(true);
+    const [platesAnonimization, setPlatesAnonimization]= useState(false);
+
+    const [active, setActive] = useState(false);
+  const handleClick = () => {
+    setActive(!active);
+  };
+
+  const [selectedOption, setSelectedOption] = useState("pixelated");
+  const handleClickPixelated = () => {
+    setSelectedOption("pixelated");
+  };
+  const handleClickBlur = () => {
+    setSelectedOption("blur");
+  };
+  const handleClickDeepNetural = () => {
+    setSelectedOption("deepNatural");
+  };
+  
   return (
    <div className="newTask">
     <div className="newTaskBackButton">
@@ -44,6 +69,118 @@ const NewTask = () => {
             <input placeholder="Filename+UploadDate" className="taskNameInput"></input>
         </div>
         <div className="horizontalLineConfig"></div>
+        <div className="addToProjectDiv">
+            <div className="addToProjectText">Add to project</div>
+            <div className="addToProjectDivSwitch">
+            <Switch
+            offColor="#D9DEE2"
+            onColor="#184952"
+            checkedIcon={false}
+            uncheckedIcon={false}
+            handleDiameter={14}
+            width={36}
+            height={18}
+            checked={addProjectSwitch}
+            onChange={()=>{setAddProjectSwitch(!addProjectSwitch)}}
+            /></div>
+        </div>
+        <div className="addProjectSearch"  style={{ 
+                    opacity: addProjectSwitch? 1 : 0.2}}>
+        <div className="taskName">
+            <label style={{width:"72.5px"}}>Project</label>
+            <input placeholder="Search projects" className="taskNameInput"></input>
+            <RxMagnifyingGlass  style={{height:"14px", width:"14px"}}/>
+        </div>
+        </div>
+        <div className="horizontalLineConfig"></div>
+        <div className="addToProjectDiv">
+            <div className="addToProjectText">Face anonimization</div>
+            <div className="addToProjectDivSwitch">
+            <Switch
+            offColor="#D9DEE2"
+            onColor="#184952"
+            checkedIcon={false}
+            uncheckedIcon={false}
+            handleDiameter={14}
+            width={36}
+            height={18}
+            checked={facesAnonimization}
+            onChange={()=>{
+                setFacesAnonimization(!facesAnonimization)
+                setPlatesAnonimization(!platesAnonimization)
+            }}
+            /></div>
+        </div>
+        <div className="addToProjectDiv">
+            <div className="addToProjectText">Plates anonimization</div>
+            <div className="addToProjectDivSwitch">
+            <Switch
+            offColor="#D9DEE2"
+            onColor="#184952"
+            checkedIcon={false}
+            uncheckedIcon={false}
+            handleDiameter={14}
+            width={36}
+            height={18}
+            checked={platesAnonimization}
+            onChange={()=>{
+                setPlatesAnonimization(!platesAnonimization)
+                setFacesAnonimization(!facesAnonimization)
+            }}
+            /></div>
+        </div>
+        <div className="horizontalLineConfig"></div>
+        <div className="anonimiType">
+            <div className="anonimiTypeTitle">Anonimization type</div>
+            <div className="typeButtons">
+                <button 
+                className="typeButton"
+                 onClick={handleClickPixelated}
+                 style={{ 
+                    backgroundColor: selectedOption === "pixelated" ? "#184952" : "white",
+                    color: selectedOption === "pixelated" ? "white": "black" }}
+                 >Pixelated</button>
+                <button 
+                className="typeButton"
+                onClick={handleClickBlur}
+                 style={{ 
+                    backgroundColor: selectedOption === "blur" ? "#184952" : "white",
+                    color: selectedOption === "blur" ? "white": "black" }}
+                    >Blur</button>
+                <button 
+                className="typeButton"
+                onClick={handleClickDeepNetural}
+                style={{ 
+                   backgroundColor: selectedOption === "deepNatural" ? "#184952" : "white",
+                   color: selectedOption === "deepNatural" ? "white": "black" }}
+                >Deep netural</button>
+            </div>
+        </div>
+        <div className="horizontalLineConfig"></div>
+        <div className="addWatermarkDiv">
+            <div className="addWatermarkText">Add watermark</div>
+            <div className="addToProjectDivSwitch">
+            <Switch
+            className="watermarkSwitch"
+            offColor="#D9DEE2"
+            onColor="#184952"
+            checkedIcon={false}
+            uncheckedIcon={false}
+            handleDiameter={14}
+            width={36}
+            height={18}
+            disabled={true}
+            checked={false}
+            onChange={()=>{
+                console.log("add watermark")
+            }}
+            /></div>
+        </div>
+        <div className="horizontalLineConfig"></div> 
+        <div className="controlButtons">
+            <button className="manageFilesBtn"><IoMdArrowBack />Manage files</button>
+            <button className="createTaskBtn">Create task</button>
+        </div>
     </div>
     </div>
    </div>

@@ -60,7 +60,7 @@ cursor: default;
 }
 
 .uploadFiles{ 
-border: 1px solid black;
+
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -83,7 +83,7 @@ flex-grow: 0;
 
 .taskConfiguration{
 /* Auto layout */
-border: 1px solid black;
+
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -160,7 +160,7 @@ transform: rotate(-0.06deg);
 margin-top: 46px;
 }
 .filesList{
-    border: 1px solid black;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,7 +238,6 @@ text-align: center;
 
 color: #0E262D;
 
-opacity: 0.2;
 }
 
 .taskName{
@@ -265,4 +264,171 @@ height: 0px;
 border: 1px solid rgba(0, 0, 0, 0.25);
 transform: rotate(-0.06deg);
 margin-top: 15px;
+}
+
+.addToProjectDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.addToProjectText{
+    display: flex;
+    float: left;
+    padding-left: 52px;
+
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 82.03%;
+}
+.addToProjectDivSwitch{
+    display: flex;
+    align-items: center;
+    padding-right: 52px;
+}
+.switch{
+}
+
+.addProjectSearch{
+    width: 100%;
+}
+
+.anonimiType{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.anonimiTypeTitle{}
+.typeButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 31px;
+}
+
+
+.typeButton{
+    background: #184952;
+    width: 100px;
+    height: 24px;
+    border-radius: 4px;
+
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 82.03%;
+/* identical to box height, or 10px */
+
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+color: white;
+border: none;
+}
+
+.typeButton:hover{
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+
+.addWatermarkDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.addWatermarkText{
+    display: flex;
+    float: left;
+    padding-left: 52px;
+
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 82.03%;
+color: #0E262D;
+opacity: 0.2;
+}
+.addWatermarkDiv:hover{
+    cursor: default;
+}
+
+.watermarkSwitch:hover{
+    cursor: default;
+}
+
+.controlButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.manageFilesBtn{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 22px 10px 20px;
+gap: 4px;
+
+width: 172px;
+height: 44px;
+
+/* Dark "green" */
+
+background: #184952;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+border-radius: 32px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 82.03%;
+border: none;
+color: #FBFBFB;
+}
+
+
+.manageFilesBtn:hover{
+    opacity: 0.8;
+}
+
+.createTaskBtn{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+width: 138px;
+height: 44px;
+
+/* Accent green */
+
+background: #C6F985;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+border-radius: 32px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 82.03%;
+color: #0E262D;
+border: none;
+}
+
+.createTaskBtn:hover{
+    opacity: 0.8;
 }
