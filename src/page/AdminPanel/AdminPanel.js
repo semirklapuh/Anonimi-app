@@ -4,6 +4,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Tasks from "./components/Tasks/Tasks";
 import Dashboard from "./components/Dashboard/Dashboard";
 import NewTask from "./components/Tasks/NewTask/NewTask";
+
 import {
   useLocation,
   useSearchParams
@@ -32,8 +33,6 @@ const AdminPanel = () => {
       <div>
         <Sidebar />
       </div>
-      {/* {page === 1 ? <Tasks/>:<Dashboard/>} */}
-      {console.log("params values is:" + params)}
       { (() => {
                 switch(params) {
                   case "1": 
@@ -50,8 +49,6 @@ const AdminPanel = () => {
                   return <Dashboard/>;
                 }
             })()}
-      {/* <Tasks/> */}
-      {/* <Dashboard/> */}
     </div>
   );
 };

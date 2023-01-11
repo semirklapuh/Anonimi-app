@@ -1,0 +1,133 @@
+.uploadStatistics {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.uploadStatistics__title {
+  width: 436px;
+  height: 20px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 82.03%;
+  /* identical to box height, or 20px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* Primary Dark */
+
+  color: #0e262d;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.uploadStatistics__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 82.03%;
+}
+
+.uploadStatistics__total {
+  width: 436px;
+  height: 17px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 82.03%;
+  /* identical to box height, or 16px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* Primary Dark */
+
+  color: #0e262d;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.uploadStatistics__data3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uploadStatistics__data2 {
+  padding-top: 10px;
+  height: 100%;
+  width: 250px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.uploadStatistics__chart {
+  max-width: 150px;
+  max-height: 150px;
+}
+.uploadStatistics__name {
+  display: flex;
+  align-items: baseline;
+}
+
+.dot1 {
+  height: 10px;
+  width: 10px;
+  background-color: #c6f985;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.dot2 {
+  height: 10px;
+  width: 10px;
+  background-color: #4ec8c0;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.dot3 {
+  height: 10px;
+  width: 10px;
+  background-color: #184952;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.dot4 {
+  height: 10px;
+  width: 10px;
+  background-color: #0e262d;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}
