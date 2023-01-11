@@ -29,6 +29,7 @@ function GetData({ dashboard }) {
     onLoad ? getProdukti() : console.log("radi ponovoo");
   }, [userData]);
 
+
   function getProdukti() {
     userData !== null
       ? userData.map((element) => {
@@ -62,6 +63,7 @@ function GetData({ dashboard }) {
             },
           ]);
           setOnLoad(false);
+
         })
       : console.log("nije uradjen update userData");
   }

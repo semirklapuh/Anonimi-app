@@ -1,3 +1,4 @@
+
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -71,3 +72,4 @@
 .crud-box {
   width: 100%;
 }
+

@@ -20,6 +20,7 @@ const Dashboard = () => {
   });
 
   return (
+
     <div className="dashboard">
       <div className="dashboard__title">
         <h2>Dashboard</h2>
@@ -46,6 +47,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

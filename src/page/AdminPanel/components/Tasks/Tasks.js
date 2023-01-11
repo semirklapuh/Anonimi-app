@@ -6,6 +6,7 @@ import {HiOutlinePlus} from "react-icons/hi";
 import {RxMagnifyingGlass} from "react-icons/rx";
 import {TbAdjustmentsHorizontal} from "react-icons/tb";
 import { color } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const Tasks = () => {
   return (
@@ -21,9 +22,9 @@ const Tasks = () => {
       </div>
       </div>
       <div className="newItemLink">
-        <Nav.Link href="#">
+        <Link to="/home?key=9">
           <Button className="add-btn"> <HiOutlinePlus /> New Task</Button>
-        </Nav.Link>
+        </Link>
       </div>
       </div>
       </div>
