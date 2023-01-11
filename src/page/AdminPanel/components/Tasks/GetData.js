@@ -30,42 +30,35 @@ function GetData({ dashboard }) {
   }, [userData]);
 
 
-  function getProdukti() {
-    userData !== null
-      ? userData.map((element) => {
-          console.log("Semir dohvaceni podaci: " + element.size);
-          setProdukti((preData) => [
-            ...preData,
-            {
-              preview: (
-                <div>
-                  {" "}
-                  <img alt="" src={LogoImage} width="40" height="25" />
-                </div>
-              ),
-              project: "Project1",
-              date: "12.02.2022.",
-              taskName: element.filename,
-              service: "faces, plates",
-              size: element.size,
-              status: (
-                <div className="tabelCompletedIcon">
-                  <GoPrimitiveDot style={{ fill: "#85D952" }} />
-                  <span style={{ paddingLeft: "5px" }}>Completed</span>
-                </div>
-              ),
-              download: (
-                <div className="tabelDownloadIcon">
-                  <RiDownloadLine />
-                </div>
-              ),
-              imageCount: "1",
-            },
-          ]);
-          setOnLoad(false);
-
+  function getProdukti()
+  {
+    userData !== null ?
+        userData.map(element => {
+          console.log("Semir dohvaceni podaci: " + element.size)
+          setProdukti((preData)=>
+            [...preData,{
+                 preview: <div> <img
+            alt=""
+            src={`data:image/jpeg;base64,${element.image}`}
+            width="40"
+            height="25"
+          /></div>,
+            project: "Project1",
+            date: "12.02.2022.",
+            taskName: element.filename,
+            service: "faces, plates",
+            size: element.size,
+            status: <div className="tabelCompletedIcon"><GoPrimitiveDot style={{fill:"#85D952"}}/><span style={{paddingLeft:"5px"}}>Completed</span></div>,
+            download: <div className="tabelDownloadIcon"><RiDownloadLine/></div>,
+            imageCount: "1"
+            }] 
+          )
+          setOnLoad(false) 
         })
-      : console.log("nije uradjen update userData");
+        
+       
+        :console.log("nije uradjen update userData")     
+
   }
 
   //   const submitAnonymize = async () => {
@@ -313,7 +306,7 @@ function GetData({ dashboard }) {
           <BootstrapTable
             bootstrap4
             keyField="taskName"
-            data={products}
+            data={produkti}
             columns={dashboard ? dashboardColumns : columns}
             defaultSorted={defaultSorted}
             pagination={pagination}
