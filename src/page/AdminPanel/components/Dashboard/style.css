@@ -11,6 +11,9 @@
   margin-left: 240px;
   padding-top: 64px;
 }
+.dashboard__data {
+  background-color: white;
+}
 
 .dashboard__title {
   margin: 1rem 2rem;
