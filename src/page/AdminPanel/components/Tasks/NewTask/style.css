@@ -133,6 +133,7 @@ padding-left: 82px;
     display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: center;
 padding: 40px 248px 8px;
 gap: 46px;
 margin-top: 46px;
@@ -149,6 +150,10 @@ border-radius: 32px;
 .dragAndDropFeature:hover{
     background-color: #E6F8CD;
     cursor: pointer; 
+}
+
+.dragAndDropFeature__drop{
+    font-size: 40px;
 }
 
 .horizontalLine{

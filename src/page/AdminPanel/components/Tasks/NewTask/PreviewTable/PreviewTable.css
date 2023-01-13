@@ -1,0 +1,10 @@
+.PreviewTable{
+    display: flex;
+    flex-direction: column;
+}
+
+.PreviewTable__legend{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}

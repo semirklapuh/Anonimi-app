@@ -14,19 +14,11 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 82.03%;
-  /* identical to box height, or 20px */
-
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-
-  /* Primary Dark */
-
   color: #0e262d;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   align-self: stretch;
@@ -49,23 +41,12 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 82.03%;
-  /* or 13px */
-
-  /* Primary Dark */
-
   color: #0e262d;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .ApiStatus__realTime {
@@ -75,27 +56,15 @@
 .ApiStatus__number {
   width: 75px;
   height: 64px;
-
   font-family: "Lato";
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
   line-height: 100%;
-  /* identical to box height, or 64px */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Primary Dark */
-
   color: #0e262d;
-
-  /* Inside auto layout */
-
-  /* flex: none;
-order: 1;
-flex-grow: 0; */
 }
 
 .ApiStatus__PS {
@@ -104,48 +73,33 @@ flex-grow: 0; */
 
 .ApiStatus__Parallel {
   cursor: pointer;
-
   width: 55px;
   height: 14px;
   left: calc(50% - 55px / 2 - 46.5px);
   top: 0px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 82.03%;
-  /* identical to box height, or 13px */
-
   display: flex;
   align-items: center;
-
-  /* Dark "green" */
-
   color: #184952;
 }
 
 .ApiStatus__Sequential {
   margin-left: 1rem;
   cursor: pointer;
-
   width: 55px;
   height: 14px;
   left: calc(50% - 55px / 2 - 46.5px);
   top: 0px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 82.03%;
-  /* identical to box height, or 13px */
-
   display: flex;
-  align-items: center;
-
-  /* Dark "green" */
-
   color: #184952;
 }
 
@@ -165,24 +119,12 @@ flex-grow: 0; */
 
 .ApiStatus__rightDiv__content {
   height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center; */
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 82.03%;
-  /* or 13px */
-
-  /* Primary Dark */
-
   color: #0e262d;
-
-  /* Inside auto layout */
 }
 
 .ApiStatus__currentMonth {
@@ -197,22 +139,10 @@ flex-grow: 0; */
   font-weight: 700;
   font-size: 64px;
   line-height: 100%;
-  /* identical to box height, or 64px */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Primary Dark */
-
   color: #0e262d;
-
-  /* Inside auto layout */
-
-  /* flex: none;
-order: 1;
-flex-grow: 0; */
-
   margin-bottom: 2.5rem;
   margin-right: 2rem;
 }
@@ -226,17 +156,10 @@ flex-grow: 0; */
   font-weight: 500;
   font-size: 20px;
   line-height: 82.03%;
-  /* identical to box height, or 16px */
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Primary Dark */
-
   color: #0e262d;
-
-  /* Inside auto layout */
   margin-bottom: 1rem;
 }
 
