@@ -10,37 +10,62 @@ const DragAndDrop = ({ setFileInfo, setSizeLimitReached }) => {
   let testLimit = 20971520; //20MB
 
   const onDrop = useCallback((acceptedFiles) => {
-    let MB2 = MB;
+    // let MB2 = MB;
 
     acceptedFiles.map((file, index, array) => {
-      getBase64(file)
-        .then((result) => {
-          // handle base64 response for each image and limit upload size
-          MB2 += file.size;
+      let MB2 = MB + file.size;
 
-          //create the object for upload
-          setFileInfo((prev) => {
-            let fileObj = {
-              fileName: file.name,
-              fileSize: file.size,
-              fileType: file.type,
-              base64: result,
-            };
-
-            //check upload size
-            if (MB2 > testLimit) {
-              setSizeLimitReached(true);
-              return [...prev];
-            } else {
-              setSizeLimitReached(false);
-              MB += file.size;
-              return [...prev, fileObj];
-            }
-          });
-        })
-        .catch((err) => {
-          console.log(err);
+      if (MB2 > limit) {
+        setSizeLimitReached(() => {
+          return true;
         });
+      } else {
+        MB += file.size;
+        setSizeLimitReached(() => {
+          return false;
+        });
+        getBase64(file).then((result) => {
+          let fileObj = {
+            fileName: file.name,
+            fileSize: file.size,
+            fileType: file.type,
+            base64: result,
+          };
+
+          setFileInfo((prev) => {
+            return [...prev, fileObj];
+          });
+        });
+      }
+
+      // getBase64(file)
+      //   .then((result) => {
+      //     // handle base64 response for each image and limit upload size
+      //     let MB2 = MB + file.size;
+      //     //create the object for upload
+      //     setFileInfo((prev) => {
+      //       let fileObj = {
+      //         fileName: file.name,
+      //         fileSize: file.size,
+      //         fileType: file.type,
+      //         base64: result,
+      //       };
+
+      //       console.log(MB2);
+      //       //check upload size
+      //       if (MB2 > testLimit) {
+      //         setSizeLimitReached(true);
+      //         return [...prev];
+      //       } else {
+      //         setSizeLimitReached(false);
+      //         MB += file.size;
+      //         return [...prev, fileObj];
+      //       }
+      //     });
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
     });
   }, []);
 

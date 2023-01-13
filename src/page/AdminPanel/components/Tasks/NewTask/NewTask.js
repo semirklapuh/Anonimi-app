@@ -19,16 +19,16 @@ const NewTask = () => {
   const [addProjectSwitch, setAddProjectSwitch] = useState(false);
   const [facesAnonimization, setFacesAnonimization] = useState(true);
   const [platesAnonimization, setPlatesAnonimization] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("pixelated");
+  const [active, setActive] = useState(false);
 
   const [fileInfo, setFileInfo] = useState([]);
   const [sizeLimitReached, setSizeLimitReached] = useState(false);
 
-  const [active, setActive] = useState(false);
   const handleClick = () => {
     setActive(!active);
   };
 
-  const [selectedOption, setSelectedOption] = useState("pixelated");
   const handleClickPixelated = () => {
     setSelectedOption("pixelated");
   };
@@ -38,8 +38,6 @@ const NewTask = () => {
   const handleClickDeepNetural = () => {
     setSelectedOption("deepNatural");
   };
-
-  console.log(sizeLimitReached);
 
   return (
     <div className="newTask">

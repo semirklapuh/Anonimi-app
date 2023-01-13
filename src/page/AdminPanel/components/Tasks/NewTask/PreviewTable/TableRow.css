@@ -9,6 +9,7 @@
 
 .TableRow__preview {
   margin-left: 1rem;
+  position: relative;
 }
 
 .TableRow__filename {
@@ -33,4 +34,18 @@
   margin-left: 3rem;
   width: 7rem;
   max-width: 7rem;
+}
+
+.ImageHoverPreview {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+}
+
+.ImageHoverPreview__image {
+  /* height: 300px;
+  width: 300px; */
+  max-height: 200px;
+  max-height: 300px;
+  border-radius: 15px;
 }

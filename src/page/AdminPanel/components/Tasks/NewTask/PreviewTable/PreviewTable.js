@@ -4,6 +4,14 @@ import TableRow from "./TableRow";
 import "./PreviewTable.css";
 
 const PreviewTable = ({ fileInfo }) => {
+  let test = 0;
+
+  fileInfo.map((value, index, array) => {
+    test += value.fileSize;
+  });
+
+  console.log(test);
+
   return (
     <div className="PreviewTable">
       <div className="PreviewTable__legend">
