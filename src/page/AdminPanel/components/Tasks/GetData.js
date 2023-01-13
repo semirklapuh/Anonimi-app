@@ -275,7 +275,7 @@ function GetData({ dashboard }) {
   ];
 
   const pagination =
-    products.length >= 5 
+    products.length >= 5 && !dashboard 
       ? paginationFactory({
           page: 2,
           sizePerPage: 5,
@@ -306,7 +306,7 @@ function GetData({ dashboard }) {
           <BootstrapTable
             bootstrap4
             keyField="taskName"
-            data={produkti}
+            data={products}
             columns={dashboard ? dashboardColumns : columns}
             defaultSorted={defaultSorted}
             pagination={pagination}

@@ -6,19 +6,19 @@
 
 .dashboard__tasks__title {
   margin-top: 1rem;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 82.03%;
-  /* or 20px */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Primary Dark */
-
   color: #0e262d;
+}
+
+.dashboard__tasks__table {
+  width: 100%;
+  overflow-y: scroll;
+  height: 450px;
 }

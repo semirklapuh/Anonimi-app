@@ -1,0 +1,36 @@
+.TableRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border-bottom: 1px solid grey;
+  padding: 1rem 0;
+}
+
+.TableRow__preview {
+  margin-left: 1rem;
+}
+
+.TableRow__filename {
+  margin-left: 3rem;
+  width: 25rem;
+  max-width: 25rem;
+}
+
+.TableRow__size {
+  margin-left: 3rem;
+  width: 6rem;
+  max-width: 6rem;
+}
+
+.TableRow__status {
+  margin-left: 3rem;
+  width: 6rem;
+  max-width: 6rem;
+}
+
+.TableRow__cancelButton {
+  margin-left: 3rem;
+  width: 7rem;
+  max-width: 7rem;
+}

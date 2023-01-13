@@ -29,6 +29,7 @@
     "react-bootstrap-table2-paginator": "^2.1.2",
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.8",
+    "react-dropzone": "^14.2.3",
     "react-form-stepper": "^2.0.3",
     "react-google-charts": "^4.0.0",
     "react-hook-form": "^7.40.0",
